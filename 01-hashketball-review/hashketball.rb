@@ -117,12 +117,32 @@ def game_hash
   }
 end
 
-
-# def num_points_scored(player_name)
-#   # get a list of all the players
-#   # find the player whose name matches the argument 'player_name'
-#   # return that player's points
+# def sum(nums)
+#   total = 0
+#   nums.each do |x|
+#     total += x
+#   end
+#   total
 # end
+
+def all_players
+  home_players = game_hash[:home][:players]
+  away_players = game_hash[:away][:players]
+  home_players.merge(away_players)
+end
+
+def find_player(player_name)
+  all_players[player_name]
+end
+
+def num_points_scored(player_name)
+  find_player(player_name)[:points]
+end
+
+def shoe_size(player_name)
+  player = all_players[player_name]
+  player[:shoe]
+end
 
 
 

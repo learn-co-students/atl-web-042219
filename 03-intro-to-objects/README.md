@@ -17,6 +17,19 @@
 
 
 
+### Whiteboard exercise - 5 classes and instances of each money
+
+classes | instances
+========|==========
+String  | "cookies"
+Symbol  | :example
+Array   | [1,2,3]
+Hash    | { brit: 'awake?' }
+Integer | 42
+Float   | 4.9
+
+
+
 ## Learning Objectives (the brit edition)
 
 * Gain some intuition for the phrase "Everything is an object"
@@ -50,8 +63,8 @@
   * Reminder: Local variables are thrown away/GC'd when you reach end of method.
   * Reminder: A method name cannot begin with an `@`.
   * Important takeaways:
-    * Methods arguments are ...
-    * We "copy" local variables into instance variables because ...
+    * Method arguments get stored in _local variables_ inside the method.
+    * We "copy" local variables into instance variables because we want them
     * Instance variables are not visible from "outside" an object.
     * Objects can hold other objects in instance variables.
       * Of any type! .... Because everything is just an object!

@@ -18,8 +18,8 @@ class TweetsApp
   private
 
   def render(tweets)
-    tweets.each.with_index(1) do |tweet, i|
-      puts "#{i}. #{tweet.username} says: #{tweet.message}"
+    tweets.each do |tweet|
+      puts "#{tweet.id}. #{tweet.username} says: #{tweet.message}"
     end
   end
 end

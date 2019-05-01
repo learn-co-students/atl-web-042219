@@ -8,7 +8,7 @@ puts "can't get name" unless brit.name == 'brit'
 safae = Teacher.new('safae', 4, 19)
 
 class Array
-  def select
+  def my_select
     results = []
     self.each do |item|
       if yield(item)

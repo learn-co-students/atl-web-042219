@@ -131,5 +131,6 @@ end
 - Model.find_by\({ attribute: value }\)
   - can find by one attribute-value pair or multiple
   - `Animal.find_by(name: 'Platypus')` will return the Animal with a name of 'Platypus')
+- Model.where\({ attribute: value }\)
 
 [Active Record Docs](http://edgeguides.rubyonrails.org/active_record_migrations.html#using-the-up-down-methods)

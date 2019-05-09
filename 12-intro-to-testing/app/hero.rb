@@ -10,7 +10,7 @@ class Hero
     # Returns the heros coolest ability
     def coolest_ability
         coolest_ability = nil
-        abilities.each do | current_ability |
+        abilities.each do |current_ability|
             if coolest_ability == nil || current_ability[:coolness] > coolest_ability[:coolness]
                 coolest_ability = current_ability
             end
@@ -18,9 +18,19 @@ class Hero
         coolest_ability
     end
 
+    def ability_names
+      @abilities.map do |ability|
+        ability[:name]
+      end
+    end
+
+    def add_ability(ability)
+      self.abilities << ability
+    end
+
     # Returns abilities Ordered Alphabetically
     def ordered_abilities
-
+      self.ability_names.sort
     end
 
 end

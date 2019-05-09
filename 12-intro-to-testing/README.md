@@ -70,6 +70,16 @@ Whether my tests are manual or automated, my thought process is the same!
 * When I run a method ...
 * Then I expect to see ...
 
+
+
+
+
+
+
+
+
+
+
 ## When Testing Gets Tricky
 
 * When I don't know what I _expect_.
@@ -94,3 +104,10 @@ We won't cover them today. :)
 * Having to write tests forces us to plan and build expectations of our code.
 * Large methods with lots of interactions are harder to test.
   * (So tests push us to break up our code into manageable pieces.)
+
+
+
+
+## Extra Resources
+
+[BetterSpecs guidelines](http://www.betterspecs.org/)

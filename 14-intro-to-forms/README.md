@@ -19,7 +19,10 @@ A tiny library.
 
 ### More behavior - CRUD
 
-* Viewing an individual book. This should be quick.
+* REVIEW: Viewing an individual book.
+
+* Interlude: Development process for web apps.
+
 * Creating a book. This is big! Rest of lecture. :)
 * Editing and Deleting would be nice. Maybe today, maybe not.
   * Y'all can tell me to speed up or slow down. Don't get bored!

@@ -1,0 +1,13 @@
+<h1>Welcome to the Library</h1>
+
+<p class="example">2 + 2 = <%= [1,2,3,4].reverse %></p>
+
+<p class="title">List of Books</p>
+
+<ul>
+  <% @books.each do |book| %>
+    <a href="/books/<%= book.id %>">
+      <li class="book"><%= book.title %> by <%= book.author %></li>
+    </a>
+  <% end %>
+</ul>

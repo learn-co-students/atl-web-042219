@@ -1,0 +1,13 @@
+<h1><%= @author.full_name %></h1>
+
+<h3>List of Works</h3>
+
+<ul>
+  <% @author.books.each do |book| %>
+    <li class="book">
+      <a href="/books/<%= book.id %>"><%= book.title %></a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/authors">Back to Authors List</a>

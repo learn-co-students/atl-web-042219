@@ -7,7 +7,9 @@
 <ul>
   <% @books.each do |book| %>
     <a href="/books/<%= book.id %>">
-      <li class="book"><%= book.title %> by <%= book.author %></li>
+      <li class="book"><%= book.title %> by <%= book.author.full_name %></li>
     </a>
   <% end %>
 </ul>
+
+<a href="/books/new">Donate a book to the library</a>

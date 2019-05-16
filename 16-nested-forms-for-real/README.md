@@ -2,10 +2,10 @@
 
 ### Objectives
 
-* Create won't always work! Wake up by seeing the `if foo.save` pattern.
-  * Add length validation to book snippet?
-* Show how to make a dropdown.
-  * To add a book for an existing author.
+<!-- * Create won't always work! Wake up by seeing the `if foo.save` pattern.
+  * Add length validation to book snippet? -->
+<!-- * Show how to make a dropdown.
+  * To add a book for an existing author. -->
 * Demonstrate nested forms to create multiple related objects at once.
   * An author and their books.
 * If there's time, see a non-RESTful route: search.

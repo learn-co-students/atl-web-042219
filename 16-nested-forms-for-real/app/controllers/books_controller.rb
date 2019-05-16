@@ -7,16 +7,30 @@ class BooksController < Sinatra::Base
   end
 
   get '/books/new' do
+    @authors = Author.all
     erb :new
   end
 
+  # patch '/books/:id/edit' do
+  #   @book = Book.find(params[:id])
+  #   if @book.update(params)
+  #    ...
+  #   else
+  #    ...
+  #   end
+  # end
+
   post '/books' do
-    @author = Author.find_or_create_by(full_name: params[:author])
-    # @author.books.create(title: params[:title], snippet: params[:snippet])
-    @book = Book.create(title: params[:title],
-                        author_id: @author.id,
-                        snippet: params[:snippet])
-    redirect "/books/#{@book.id}"
+    @book = Book.new(params)
+    if @book.save
+      # what to do if the save was successful
+      redirect "/books/#{@book.id}"
+    else
+      # what to do if save failed
+      @errors = @book.errors.full_messages
+      @authors = Author.all
+      erb :new
+    end
   end
 
   get '/books/:id' do

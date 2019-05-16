@@ -12,10 +12,8 @@ class ApplicationController < Sinatra::Base
   # end
 
   get '/' do
-    @books = Book.all
-    erb :index
+    erb :homepage
   end
-
 
   get '/cookies' do
     "hi rose"

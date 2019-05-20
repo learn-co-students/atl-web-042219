@@ -1,0 +1,31 @@
+<h1>Add a new Cohort</h1>
+
+<% if @cohort.errors %>
+  <ul>
+    <% @cohort.errors.full_messages.each do |msg| %>
+      <li style="color: red;"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<!-- <form action="<%= cohorts_path %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <input type="text" name="name" value="<%= @cohort.name %>" />
+  <input type="submit" value="Add Cohort" />
+</form> %>
+-->
+
+<!--
+
+<% byebug %>
+<%= form_tag(cohorts_path, method: :post) do %>
+  <%= text_field_tag("name", @cohort.name) %>
+  <%= submit_tag("Add Cohort") %>
+<% end %>
+
+-->
+
+<%= form_for(@cohort) do |f| %>
+  <%= f.text_field(:name) %>
+  <%= f.submit("Add Cohort") %>
+<% end %>

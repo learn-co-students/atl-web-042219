@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image_url: MyString
+  favorite_movie: MyString
+  cohort_id: one
+
+two:
+  name: MyString
+  image_url: MyString
+  favorite_movie: MyString
+  cohort_id: two

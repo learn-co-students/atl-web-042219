@@ -1,0 +1,16 @@
+<% if @student.errors %>
+  <h2>Form Errors</h2>
+  <ul>
+    <% @student.errors.full_messages.each do |msg| %>
+      <li style="color: red;"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(@student) do |f| %>
+  <%= f.text_field(:name, placeholder: "Name") %>
+  <%= f.text_field(:image_url) %>
+  <%= f.text_field(:favorite_movie) %>
+  <%= f.collection_select(:cohort_id, Cohort.all, :id, :name) %>
+  <%= f.submit %>
+<% end %>

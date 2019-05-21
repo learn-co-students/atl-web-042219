@@ -1,0 +1,16 @@
+<h1>Edit a current student</h1>
+
+<%= render("form") %>
+
+<%= link_to("All Students", students_path) %>
+
+
+<!-- 
+<%= form_tag(student_path(@student), method: :patch) do %>
+  <%= text_field_tag("name", @student.name, placeholder: "Name") %>
+  <%= text_field_tag("image_url", @student.image_url, placeholder: "Image") %>
+  <%= text_field_tag("favorite_movie", @student.favorite_movie, placeholder: "Movie") %>
+  <%= collection_select(nil, :cohort_id, Cohort.all, :id, :name) %>
+  <input type="submit" value="Update Student" />
+<% end %>
+-->

@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :cohorts, only: [:new, :create, :show, :index], path: 'batches'
   # resources :cohorts, except: [:edit, :update, :destroy]
   resources :students, only: [:new, :create, :show, :edit, :update]
+
+  root to: 'cohorts#index'
 end

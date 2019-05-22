@@ -1,7 +1,21 @@
-<h1>Name: <%= @student.name %></h1>
-<h2>Image: <%= image_tag(@student.image_url) %></h2>
-<h3>Favorite Movie: <%= @student.favorite_movie %></h3>
-<h3>Cohort: <%= @student.cohort.name %></h3>
+<div class="ui card">
+  <div class="content">
+    <div class="right floated meta"><%= time_ago_in_words(@student.created_at) %></div>
+    <%= @student.name %>
+  </div>
+  <div class="image">
+    <img src="<%= @student.image_url %>">
+  </div>
+  <div class="content">
+    <i class="comment icon"></i>
+    Cohort: <%= link_to(@student.cohort.name, cohort_path(@student.cohort)) %>
+  </div>
+  <div class="extra content">
+    <div class="ui large transparent left icon input">
+      <i class="heart outline icon"></i>
+    </div>
+    <span class="right floated">Loves: <%= @student.favorite_movie %></span>
+  </div>
+</div>
 
 <%= link_to("Edit Student", edit_student_path(@student)) %>
-<%= link_to("All Cohorts", cohorts_path) %>

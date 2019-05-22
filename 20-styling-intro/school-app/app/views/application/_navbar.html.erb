@@ -1,0 +1,16 @@
+<div class="ui secondary menu">
+  <%= link_to("Home", root_path, class: "item active") %>
+  <%= link_to("Cohorts", cohorts_path, class: "item") %>
+  <%= link_to("Students", students_path, class: "item") %>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    <a class="ui item">
+      Logout
+    </a>
+  </div>
+</div>

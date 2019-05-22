@@ -1,0 +1,7 @@
+<h1>Name: <%= @student.name %></h1>
+<h2>Image: <%= image_tag(@student.image_url) %></h2>
+<h3>Favorite Movie: <%= @student.favorite_movie %></h3>
+<h3>Cohort: <%= @student.cohort.name %></h3>
+
+<%= link_to("Edit Student", edit_student_path(@student)) %>
+<%= link_to("All Cohorts", cohorts_path) %>

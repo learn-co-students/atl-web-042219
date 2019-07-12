@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
+import WashButton from '../components/WashButton'
 
 const Table = (props) => {
 
-  const renderPlates = (array) => {
-    return array.map((x, index) => {
-      return <div className="empty-plate" style={{ top: -7 * index }} />
-    })
+  const renderPlates = (count) => {
+    let plateElements = []
+    for (let i = 0; i < count; i++) {
+      plateElements.push(<div className="empty-plate" style={{ top: -7 * i }} />)
+    }
+    return plateElements
   }
 
   return (
@@ -15,9 +18,10 @@ const Table = (props) => {
         You have: ${props.wallet} remaining!
       </h1>
       <div className="table">
+        <WashButton />
         <div className="stack">
           {
-            renderPlates(props.eaten)
+            renderPlates(props.plates)
           }
         </div>
       </div>

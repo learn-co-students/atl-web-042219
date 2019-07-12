@@ -1,16 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 const Sushi = (props) => {
   return (
     <div className="sushi">
       <div className="plate"
-        onClick={/* Give me a callback! */ null}>
+        onClick={() => props.dispatch({ type: "EAT_SUSHI", ...props })}>
         {
-          /* Tell me if this sushi has been eaten! */
-          false ?
-            null
-            :
-            <img src={props.img_url} width="100%" />
+          props.eaten.includes(props.id) ? null : <img src={props.img_url} width="100%" />
         }
       </div>
       <h4 className="sushi-details">
@@ -20,4 +17,6 @@ const Sushi = (props) => {
   )
 }
 
-export default Sushi
+let mapStateToProps = (state) => ({ eaten: state.order.eaten })
+
+export default connect(mapStateToProps)(Sushi)

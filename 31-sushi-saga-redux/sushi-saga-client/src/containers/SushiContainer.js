@@ -3,10 +3,11 @@ import Sushi from '../components/Sushi'
 import MoreButton from '../components/MoreButton'
 import { connect } from 'react-redux'
 import { getSushi } from "../services/backend"
+import { fetchedSushi } from "../actions"
 
 class SushiContainer extends React.Component {
   componentDidMount() {
-    getSushi().then(data => this.props.dispatch({ type: "GET_SUSHI", data: data }))
+    getSushi().then(this.props.fetchedSushi)
   }
 
   render() {
@@ -29,4 +30,4 @@ let mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(SushiContainer)
+export default connect(mapStateToProps, { fetchedSushi })(SushiContainer)

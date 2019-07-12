@@ -9,6 +9,8 @@
 ### State to be managed
 
 * sushi
+* page
+
 * eaten
 * budget
 

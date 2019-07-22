@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sbcl --eval "(ql:quickload :slipnslide)" --eval "(in-package :slipnslide)" \
+     --eval "(main \"SLIDES.md\")" --quit
